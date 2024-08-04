@@ -4,6 +4,8 @@
 
 #include QMK_KEYBOARD_H
 
+#include "sendstring_german.h"
+
 enum custom_layers {
     _QWERTY,
     _LOWER,
@@ -67,7 +69,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LCTL(KC_C),LCTL(KC_V), LCTL(LSFT(KC_C)),LCTL(LSFT(KC_V)),                       KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT,
                                     LT(LOWER,KC_ESC),KC_SPC,                                   KC_ENT, LT(EXTRA, KC_BSPC),
                                          LCTL(KC_B),KC_TAB,                                 LCTL(KC_BSPC),  LCTL(KC_T),
-                                         _______, _______,                                             _______,_______
+                                         _______, _______,                                  KC_KB_VOLUME_UP,KC_KB_VOLUME_DOWN
     ),
 
 /* Keymap 1: LOWER
@@ -122,8 +124,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_EXTRA] = LAYOUT_6x6_4(
         _______,_______,_______,_______,_______,_______,                        _______,  _______ , _______ ,_______,_______,_______,
         _______,_______,_______,_______,_______,_______,                        _______,  _______ ,  _______ ,_______,_______,_______,
-        _______,_______,_______,_______,_______,_______,                        _______,  _______ ,  _______ , _______,_______,_______,
-        _______,_______,_______,_______,_______,_______,                        _______,  KC_KB_VOLUME_DOWN ,  KC_KB_VOLUME_UP , _______,_______,_______,
+        _______,_______,_______,_______,_______,_______,                        _______,  DE_UDIA ,  _______ , DE_ODIA,_______,_______,
+        _______,DE_ADIA,DE_SS,_______,_______,_______,                        _______,  KC_KB_VOLUME_DOWN ,  KC_KB_VOLUME_UP , _______,_______,_______,
         _______,_______,_______,_______,_______,_______,                        _______,  KC_BRIGHTNESS_DOWN ,  KC_BRIGHTNESS_UP , _______,_______,_______,
                                 _______,_______,_______,_______,            _______, _______,_______,_______,
                                                 _______,_______,            _______,_______,
