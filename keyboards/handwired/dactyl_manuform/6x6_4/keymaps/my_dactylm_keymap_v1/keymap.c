@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LALT(KC_1) , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                            KC_6  , KC_7  , KC_8  , KC_9  , KC_0  ,KC_DEL,
         LALT(KC_2) , KC_Q  , KC_W  , KC_E  , KC_R  , KC_T  ,                            KC_Y  , KC_U  , KC_I  , KC_O  , KC_P  ,KC_PGUP,
         LALT(KC_3), KC_A  , KC_S  , LT(RAISE, KC_D) , LT(NAV, KC_F)  , KC_G  ,                   KC_H  , KC_J  , KC_K  , KC_L  ,KC_SCLN,KC_PGDN,
-        LALT(KC_4), LGUI_T(KC_Z), LALT_T(KC_X), LCTL_T(KC_C), LSFT_T(KC_V), KC_B,       KC_N  , LSFT_T(KC_M)  , LCTL_T(KC_COMM) , LALT_T(KC_DOT) ,LGUI(KC_SLSH),KC_CAPS,
+        LALT(KC_4), LGUI_T(KC_Z), LALT_T(KC_X), LCTL_T(KC_C), LSFT_T(KC_V), KC_B,       KC_N  , LSFT_T(KC_M)  , LCTL_T(KC_COMM) , LALT_T(KC_DOT) ,LGUI_T(KC_SLSH),KC_CAPS,
         LCTL(KC_C),LCTL(KC_V), LCTL(LSFT(KC_C)),LCTL(LSFT(KC_V)),                       KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT,
                                     LT(LOWER,KC_ESC),KC_SPC,                                   KC_ENT, LT(EXTRA, KC_BSPC),
                                          LCTL(KC_B),KC_TAB,                                 LCTL(KC_BSPC),  LCTL(KC_T),
