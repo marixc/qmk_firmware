@@ -67,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         LALT(KC_3), KC_A  , KC_S  , LT(RAISE, KC_D) , LT(NAV, KC_F)  , KC_G  ,                   KC_H  , KC_J  , KC_K  , KC_L  ,KC_SCLN,KC_PGDN,
         LALT(KC_4), LGUI_T(KC_Z), LALT_T(KC_X), LCTL_T(KC_C), LSFT_T(KC_V), KC_B,       KC_N  , LSFT_T(KC_M)  , LCTL_T(KC_COMM) , LALT_T(KC_DOT) ,LGUI_T(KC_SLSH),KC_CAPS,
         LCTL(KC_C),LCTL(KC_V), LCTL(LSFT(KC_C)),LCTL(LSFT(KC_V)),                       KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT,
-                                    LT(LOWER,KC_ESC),KC_SPC,                                   KC_ENT, LT(EXTRA, KC_BSPC),
+                                    LT(LOWER,KC_SPC),KC_ESC,                                   KC_ENT, LT(EXTRA, KC_BSPC),
                                          LCTL(KC_B),KC_TAB,                                 LCTL(KC_BSPC),  LCTL(KC_T),
                                          LCTL(KC_Z),LCTL(KC_Y),                                  KC_KB_VOLUME_UP,KC_KB_VOLUME_DOWN
     ),
