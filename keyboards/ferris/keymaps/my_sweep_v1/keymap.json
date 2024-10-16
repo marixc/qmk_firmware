@@ -5,13 +5,13 @@
     "keymap": "default",
     "layout": "LAYOUT_split_3x5_2",
     "layers": [
-        ["KC_PGUP"       , "LALT(KC_B)"       , "LALT(KC_ENT)"          , "LALT(KC_R)"         , "TG(1)",
+        ["KC_PGUP"       , "LALT(KC_B)"       , "LGUI(KC_ENT)"          , "LALT(KC_R)"         , "TG(1)",
         "LCTL(LALT(KC_X))"       , "LALT(KC_4)"  , "LALT(KC_5)"     , "LALT(KC_6)"    , "KC_KB_VOLUME_UP",
  
-        "KC_PGDN"       , "LALT(KC_F)"     , "LALT(KC_U)"          , "LALT(KC_Q)"         , "LCTL(LALT(KC_D))",
+        "KC_PGDN"       , "LALT(KC_F)"     , "LALT(KC_U)"          , "LALT(KC_Q)"         , "LCTL(LALT(KC_F))",
         "LCTL(KC_T)"       , "LALT(KC_1)"  , "LALT(KC_2)"     , "LALT(KC_3)"    , "KC_KB_VOLUME_DOWN",
  
-        "LCTL(KC_C)"       , "LCTL(KC_V)"       , "LCTL(LSFT(KC_C))"          , "LCTL(LSFT(KC_V))"         , "LCTL(KC_F)",
+        "LCTL(KC_C)"       , "LCTL(KC_V)"       , "LCTL(LSFT(KC_C))"          , "LCTL(LSFT(KC_V))"         , "LCTL(KC_SLSH)",
         "LCTL(KC_W)"       , "KC_LEFT"  , "KC_DOWN"     , "KC_UP"    , "KC_RIGHT",
  
         "LCTL(KC_Z)"       , "LCTL(KC_Y)",
