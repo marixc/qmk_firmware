@@ -7,27 +7,27 @@
     "layers": [
         ["KC_PGUP"       , "LALT(KC_B)"       , "LGUI(KC_ENT)"          , "LALT(KC_R)"         , "TG(1)",
         "LCTL(LALT(KC_X))"       , "LALT(KC_4)"  , "LALT(KC_5)"     , "LALT(KC_6)"    , "KC_KB_VOLUME_UP",
- 
+
         "KC_PGDN"       , "LALT(KC_F)"     , "LALT(KC_U)"          , "LALT(KC_Q)"         , "LCTL(LALT(KC_F))",
         "LCTL(KC_T)"       , "LALT(KC_1)"  , "LALT(KC_2)"     , "LALT(KC_3)"    , "KC_KB_VOLUME_DOWN",
- 
+
         "LCTL(KC_C)"       , "LCTL(KC_V)"       , "LCTL(LSFT(KC_C))"          , "LCTL(LSFT(KC_V))"         , "LCTL(KC_SLSH)",
         "LCTL(KC_W)"       , "KC_LEFT"  , "KC_DOWN"     , "KC_UP"    , "KC_RIGHT",
- 
+
         "LCTL(KC_Z)"       , "LCTL(KC_Y)",
         "LCTL(KC_BSPC)"       , "LCTL(KC_A)"
        ],
-        ["LT(6, KC_Q)"        , "KC_W"        , "LT(5,KC_E)"           , "LT(3,KC_R)"          , "KC_T",
-         "KC_Y"        , "KC_U"        , "KC_I"           , "KC_O"          , "KC_P",
+        ["LT(6, KC_Q)" , "KC_W"        , "LT(6,KC_E)"  , "LT(4,KC_R)"  , "KC_T",
+         "KC_Y"        , "KC_U"        , "KC_I"        , "KC_O"        , "KC_P",
 
-         "LGUI_T(KC_A)"        , "LALT_T(KC_S)"        , "LCTL_T(KC_D)"     , "LSFT_T(KC_F)"    , "KC_G",
-         "KC_H"        , "LSFT_T(KC_J)"        , "LCTL_T(KC_K)"           , "LALT_T(KC_L)"          , "LGUI_T(KC_BSPC)",
+         "LGUI_T(KC_A)", "LALT_T(KC_S)", "LCTL_T(KC_D)", "LSFT_T(KC_F)", "KC_G",
+         "KC_H"        , "LSFT_T(KC_J)", "LCTL_T(KC_K)", "LALT_T(KC_L)", "LGUI_T(KC_BSPC)",
 
          "KC_Z", "KC_X", "KC_C"   , "KC_V"  , "KC_B",
-         "KC_N"        , "KC_M", "KC_COMM", "KC_DOT", "KC_QUES",
+         "KC_N"        , "KC_M", "KC_COMM", "KC_DOT", "KC_SLSH",
 
-         "LT(2,KC_ESC)", "KC_SPC",
-         "KC_ENT"      , "LT(1,KC_TAB)"
+         "LT(3,KC_ESC)", "KC_SPC",
+         "KC_ENT"      , "LT(2,KC_TAB)"
         ],
         ["KC_LABK"     , "KC_9"        , "KC_8"           , "KC_7"          , "KC_LCBR",
          "KC_RCBR"     , "KC_PERC"     , "KC_DQUO"        , "KC_QUOT"       , "KC_RABK",
@@ -53,10 +53,10 @@
          "KC_NO"       , "KC_NO",
          "KC_NO"       , "MO(4)"
         ],
-        ["KC_NO"       , "KC_NO"       , "KC_NO"          , "KC_NO"         , "KC_NO",
+        ["KC_NO"       , "KC_NO"       , "KC_LCTL"          , "KC_NO"         , "KC_NO",
          "KC_HOME"     , "KC_BSPC"     , "LCTL(KC_BSPC)"  , "KC_NO"         , "KC_DEL",
 
-         "KC_NO"       , "KC_LSFT"     , "KC_LCTL"        , "KC_NO"         , "KC_NO",
+         "KC_NO"       , "KC_LSFT"     , "KC_NO"        , "KC_NO"         , "KC_NO",
          "KC_LEFT"     , "KC_DOWN"     , "KC_UP"          , "KC_RIGHT"      , "KC_NO",
 
          "KC_NO"       , "KC_NO"       , "KC_NO"          , "KC_NO"         , "KC_NO",
@@ -77,7 +77,7 @@
          "KC_NO"       , "KC_NO",
          "KC_NO"       , "KC_NO"
         ],
-        ["KC_NO"       , "KC_NO"       , "KC_NO"          , "KC_NO"         , "QK_BOOT",
+        ["KC_NO"       , "KC_LSFT"       , "KC_NO"          , "KC_NO"         , "QK_BOOT",
          "KC_NO"       , "LALT(KC_7)"  , "LALT(KC_8)"     , "LALT(KC_9)"    , "KC_NO",
 
          "KC_NO"       , "TG(1)"     , "KC_NO"          , "KC_NO"         , "KC_NO",
