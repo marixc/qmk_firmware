@@ -7,7 +7,8 @@
 #include "sendstring_german.h"
 
 enum custom_layers {
-    _QWERTY,
+    // _QWERTY,
+    _COLEMAK_DH,
     _LOWER,
     _RAISE,
     _EXTRA,
@@ -72,26 +73,53 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     //                                      LCTL(KC_Z),LCTL(KC_Y),                                  KC_KB_VOLUME_UP,KC_KB_VOLUME_DOWN
     // ),
 
-    [_QWERTY] = LAYOUT_6x6_4(
+//     [_QWERTY] = LAYOUT_6x6_4(
+//     // ─────────────────────────── Row 1 ───────────────────────────
+//     KC_F1  , KC_F2 , KC_F3 , KC_F4 , KC_F5 , KC_F6 ,                                KC_F7 , KC_F8 , KC_F9 , KC_F10 , KC_F11 , KC_F12 ,
+
+//     // ─────────────────────────── Row 2 ───────────────────────────
+//     KC_BACKSLASH , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                            KC_6  , KC_7  , KC_8  , KC_9  , KC_0  , KC_MINS ,
+
+//     // ─────────────────────────── Row 3 ───────────────────────────
+//     KC_TAB , KC_Q  , KC_W  , LT(RAISE, KC_E) , LT(NAV, KC_R) , KC_T  ,          KC_Y  , KC_U  , KC_I  , KC_O  , KC_P  , KC_BSPC ,
+
+//     // ─────────────────────────── Row 4 (home row – no mods) ───────────────────────────
+//     KC_EQUAL, KC_A  , KC_S  , KC_D  , KC_F  , KC_G  ,                           KC_H  , KC_J  , KC_K  , KC_L  , KC_SCLN , KC_ENT ,
+
+//     // ─────────────────────────── Row 5 (mods moved here) ───────────────────────────
+//     KC_QUOT ,LGUI_T(KC_Z) , LALT_T(KC_X) , LCTL_T(KC_C) , LSFT_T(KC_V) , KC_B ,              KC_N , LSFT_T(KC_M) , LCTL_T(KC_COMM) , LALT_T(KC_DOT) , LGUI_T(KC_SLSH) , KC_GRAVE,
+
+//     // ─────────────────────────── Thumb / Nav cluster ───────────────────────────
+//     LCTL(KC_C) , LCTL(KC_V) , KC_LBRC , KC_RBRC ,                 KC_LEFT , KC_DOWN , KC_UP , KC_RIGHT ,
+
+//                                 KC_ENT , LT(EXTRA, KC_CAPS) ,                      KC_SPC , LT(LOWER, KC_SPC) ,
+//                                      LCTL(KC_B) , KC_TAB ,                        LCTL(KC_BSPC) , LCTL(KC_T) ,
+//                                      LCTL(KC_Z) , LCTL(KC_Y) ,                    KC_KB_VOLUME_UP , KC_KB_VOLUME_DOWN
+// ),
+
+[_COLEMAK_DH] = LAYOUT_6x6_4(
     // ─────────────────────────── Row 1 ───────────────────────────
     KC_F1  , KC_F2 , KC_F3 , KC_F4 , KC_F5 , KC_F6 ,                                KC_F7 , KC_F8 , KC_F9 , KC_F10 , KC_F11 , KC_F12 ,
 
     // ─────────────────────────── Row 2 ───────────────────────────
-    KC_BACKSLASH , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                            KC_6  , KC_7  , KC_8  , KC_9  , KC_0  , KC_MINS ,
+    KC_BACKSLASH , KC_1  , KC_2  , KC_3  , KC_4  , KC_5  ,                          KC_6  , KC_7  , KC_8  , KC_9  , KC_0  , KC_MINS ,
 
-    // ─────────────────────────── Row 3 ───────────────────────────
-    KC_TAB , KC_Q  , KC_W  , LT(RAISE, KC_E) , LT(NAV, KC_R) , KC_T  ,          KC_Y  , KC_U  , KC_I  , KC_O  , KC_P  , KC_BSPC ,
+    // ─────────────────────────── Row 3 (Colemak-DH top row)
+    KC_TAB ,
+    KC_Q  , KC_W  , KC_F  , LT(RAISE, KC_P) , KC_B  ,                              KC_J  , KC_L  , KC_U  , KC_Y  , KC_SCLN , KC_BSPC ,
 
-    // ─────────────────────────── Row 4 (home row – no mods) ───────────────────────────
-    KC_EQUAL, KC_A  , KC_S  , KC_D  , KC_F  , KC_G  ,                           KC_H  , KC_J  , KC_K  , KC_L  , KC_SCLN , KC_ENT ,
+    // ─────────────────────────── Row 4 (Colemak-DH home row)
+    KC_EQUAL ,
+    KC_A  , KC_R  , KC_S  , KC_T  , KC_G  ,                                       KC_M  , KC_N  , KC_E  , KC_I  , KC_O  , KC_ENT ,
 
-    // ─────────────────────────── Row 5 (mods moved here) ───────────────────────────
-    KC_QUOT ,LGUI_T(KC_Z) , LALT_T(KC_X) , LCTL_T(KC_C) , LSFT_T(KC_V) , KC_B ,              KC_N , LSFT_T(KC_M) , LCTL_T(KC_COMM) , LALT_T(KC_DOT) , LGUI_T(KC_SLSH) , KC_GRAVE,
+    // ─────────────────────────── Row 5 (Colemak-DH bottom row + mods)
+    KC_QUOT ,
+    LGUI_T(KC_Z) , LALT_T(KC_X) , LCTL_T(KC_C) , LSFT_T(KC_D) , KC_V  ,             KC_K  , LSFT_T(KC_H) , LCTL_T(KC_COMM) , LALT_T(KC_DOT) , LGUI_T(KC_SLSH) , KC_GRAVE ,
 
-    // ─────────────────────────── Thumb / Nav cluster ───────────────────────────
-    LCTL(KC_C) , LCTL(KC_V) , KC_LBRC , KC_RBRC ,                 KC_LEFT , KC_DOWN , KC_UP , KC_RIGHT ,
+    // ─────────────────────────── Thumb / Nav cluster (unchanged)
+    LCTL(KC_C) , LCTL(KC_V) , KC_LBRC , KC_RBRC ,                                  KC_LEFT , KC_DOWN , KC_UP , KC_RIGHT ,
 
-                                KC_ENT , LT(EXTRA, KC_CAPS) ,                      KC_SPC , LT(LOWER, KC_SPC) ,
+                                KC_ENT , LT(EXTRA, KC_CAPS) ,                     KC_SPC , LT(LOWER, KC_SPC) ,
                                      LCTL(KC_B) , KC_TAB ,                        LCTL(KC_BSPC) , LCTL(KC_T) ,
                                      LCTL(KC_Z) , LCTL(KC_Y) ,                    KC_KB_VOLUME_UP , KC_KB_VOLUME_DOWN
 ),
