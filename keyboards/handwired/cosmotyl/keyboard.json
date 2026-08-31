@@ -1,0 +1,27 @@
+{
+    "keyboard_name": "Cosmotyl",
+    "manufacturer": "Cosmos",
+    "url": "https://ryanis.cool/cosmos",
+    "maintainer": "rianadon",
+    "usb": {
+        "vid": "0x444D",
+        "pid": "0x3435",
+        "device_version": "0.0.1"
+    },
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+    "board": "GENERIC_RP_RP2040",
+    "diode_direction": "ROW2COL",
+    "matrix_pins": {
+        "rows": ["GP2", "GP4"],
+        "cols": ["GP3", "GP5"]
+    },
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                { "matrix": [0, 0], "x": 0, "y": 0 },
+                { "matrix": [1, 1], "x": 1, "y": 0 }
+            ]
+        }
+    }
+}
