@@ -1,3 +1,5 @@
 #pragma once
 
 #define RP2040_BOOTLOADER_DOUBLE_TAP_RESET
+#define MASTER_LEFT
+#define SPLIT_USB_DETECT
