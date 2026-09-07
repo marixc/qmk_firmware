@@ -1,24 +1,91 @@
 #include QMK_KEYBOARD_H
 
-const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [0] = LAYOUT(
-        /* Left Hand */
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,
-        KC_TAB,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,
-        KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,
-        KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,
-        KC_HOME, KC_END,  KC_DEL,  KC_QUOT,
-        KC_SPC,  KC_BSLS, KC_1,    KC_2,    KC_3,
-
-        /* Right Hand */
-        KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,
-        KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
-        KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
-        KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_ENT,
-        KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_EQL,
-        KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT,
-        KC_1,    KC_2,    KC_ENT,  KC_3,    KC_4
-    )
+enum layers {
+    BASE,
+    RAISE,
+    LOWER,
+    FN
 };
 
+const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
+    [BASE] = LAYOUT(
+        /* Left Hand */
+        LT(FN, KC_F1),   KC_F2,        KC_F3,        KC_F4,        KC_F5,           KC_F6,
+        KC_BACKSLASH,    KC_1,         KC_2,         KC_3,         KC_4,            KC_5,
+        KC_ESC,          KC_Q,         KC_W,         KC_F,         LT(RAISE, KC_P), KC_B,
+        KC_TAB,          KC_A,         KC_R,         KC_S,         KC_T,            KC_G,
+        KC_ESC,          LGUI_T(KC_Z), LALT_T(KC_V), LCTL_T(KC_C), LSFT_T(KC_D),   KC_X,
+        LCTL(KC_C),      LCTL(KC_V),   KC_LEFT,      KC_RIGHT,
+        LT(LOWER, KC_SPC), KC_BSLS,    KC_1,         LCTL(KC_Z),   LCTL(KC_Y),
+
+        /* Right Hand */
+        KC_F7,           KC_F8,        KC_F9,        KC_F10,       KC_F11,          KC_F12,
+        KC_6,            KC_7,         KC_8,         KC_9,         KC_0,            KC_MINS,
+        KC_J,            KC_L,         KC_U,         KC_Y,         KC_SCLN,         KC_BSPC,
+        KC_M,            KC_N,         KC_E,         KC_I,         KC_O,            KC_ENT,
+        KC_K,            LSFT_T(KC_H), LCTL_T(KC_COMM), LALT_T(KC_DOT), LGUI_T(KC_SLSH), KC_EQL,
+        KC_END,          KC_UP,      KC_HOME,        KC_DOWN,
+        KC_ENT,          LCTL(KC_BSPC),         KC_I,       KC_KB_VOLUME_UP,         KC_KB_VOLUME_DOWN
+    ),
+
+    [RAISE] = LAYOUT(
+        /* Left Hand */
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, KC_LSFT, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______,
+        _______, _______, _______, _______, _______,
+
+        /* Right Hand */
+        _______, _______,    _______,    _______,    _______, _______,
+        _______, _______,    _______,    _______,    _______, _______,
+        _______, LALT(KC_7), LALT(KC_8), LALT(KC_9), _______, _______,
+        _______, LALT(KC_4), LALT(KC_5), LALT(KC_6), _______, _______,
+        _______, LALT(KC_1), LALT(KC_2), LALT(KC_3), _______, _______,
+        _______, _______,    _______,    _______,
+        _______, _______,    _______,    _______,    _______
+    ),
+
+    [LOWER] = LAYOUT(
+        /* Left Hand */
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, KC_LABK, KC_RABK, _______,
+        _______, _______, KC_PIPE, KC_LCBR, KC_RCBR, KC_MINUS,
+        KC_CAPS, _______, KC_BSLS, KC_LPRN, KC_RPRN, KC_UNDS,
+        _______, _______, KC_HASH, KC_LBRC, KC_RBRC, KC_TILD,
+        _______, _______, _______, _______,
+        _______, _______, _______, _______, _______,
+
+        /* Right Hand */
+        _______, _______,  _______,  _______,  _______, _______,
+        _______, _______,  _______,  _______,  _______, _______,
+        _______, KC_DQUO,  KC_PERC,  _______,  _______, _______,
+        _______, KC_QUOT,  KC_ASTR,  KC_PLUS,  _______, _______,
+        _______, KC_EQUAL, KC_CIRC,  KC_GRV,   _______, _______,
+        _______, _______,  _______,  _______,
+        _______, _______,  _______,  _______,  _______
+    ),
+
+    [FN] = LAYOUT(
+        /* Left Hand */
+        _______, _______, _______, _______, _______, QK_BOOT,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______,
+        _______, _______, _______, _______, _______,
+
+        /* Right Hand */
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, _______, _______,
+        _______, _______, _______, _______,
+        _______, _______, _______, _______, _______
+    )
+};
